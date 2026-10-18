@@ -1,16 +1,16 @@
-# HoTT Shots
+# BuckeTT Bros
 
 An arcade 2-on-2 street basketball game starring Teddy and Tommy, on a half court with one hoop, a chain net, chain-link fences and TEDDY / TOMMY / METRO graffiti, at sunset. It's inspired by the 90s arcade street-ball games, with our own names and art. It's built with Claude Code from plain JavaScript and Three.js, on the shared Claude Games kit.
 There are no image, model or audio files: the players are the kit's blocky characters, every texture is painted on a canvas, and every sound is synthesised.
 The brothers are a team: you play whoever has the ball, the other brother plays alongside you, and calling him in sets up an **ALLEY-OOP!**
 
-"HoTT Shots" is a working title. It lives in one constant, `HOOPS_TITLE` in `js/title.js`, and the logo, the page title and the results screen read it from there.
+The name lives in one constant, `HOOPS_TITLE` in `js/title.js`, and the logo and the page title read it from there.
 
 ## Play
 
 - **Double-click `index.html`.** It works offline because Three.js and the kit are copied into `kit/`. Without internet the title font falls back to Arial Black.
-- **Send one file:** `dist/hoops96-teddy.html` is the whole game inlined, about 830 KB. AirDrop or email it, then open it in a browser.
-- Rebuild that file after any edit: `python3 kit/tools/bundle.py . --name hoops96-teddy`
+- **Send one file:** `dist/buckett-bros.html` is the whole game inlined, about 830 KB. AirDrop or email it, then open it in a browser.
+- Rebuild that file after any edit: `python3 kit/tools/bundle.py . --name buckett-bros`
 
 ### Modes
 
@@ -130,7 +130,7 @@ js/sfx.js          game sounds on top of Kit.sound
 js/game.js         scene, camera, drawing, events to effects, HUD, screens, main loop, window.game hooks
 tools/soak.js      runs the headless tests under Node
 kit/               copy of ~/claude-games/kit (python3 ../kit/tools/sync.py .), never edited here
-dist/hoops96-teddy.html   the single-page build
+dist/buckett-bros.html    the single-page build
 ```
 
 ## Kit candidates

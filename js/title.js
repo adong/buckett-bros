@@ -1,4 +1,4 @@
-/* The game's name, in one place: the page title, the logo and the results screen all read it.
-   A working title: Alan names his games himself. */
-window.HOOPS_TITLE = 'HoTT Shots';
+/* The game's name, in one place: the page title and the logo read it.
+   Named by Alan. */
+window.HOOPS_TITLE = 'BuckeTT Bros';
 window.HOOPS_TAGLINE = "Teddy & Tommy's 2-on-2 street hoops";
