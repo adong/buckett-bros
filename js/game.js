@@ -1042,7 +1042,7 @@
   function initUI() {
     // the logo: the first O becomes a bouncing ball, and a TT (if the name has one) lights up
     $('logoText').innerHTML = TITLE.toUpperCase().replace('TT', '<em>TT</em>').replace('O', '<span class="ball">🏀</span>');
-    document.title = TITLE;
+    document.title = `${TITLE} · Teddy & Tommy`;
     $('tagline').textContent = window.HOOPS_TAGLINE || '';
     layoutMeter();
     const tap = (el, fn) => el.addEventListener('click', (e) => {

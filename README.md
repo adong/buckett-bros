@@ -2,6 +2,10 @@
 
 [![BuckeTT Bros title screen](docs/screenshot.jpg)](https://adong.github.io/buckett-bros/)
 
+2-on-2 street basketball: Team Teddy & Tommy, with dunks and alley-oops. 1 or 2 players.
+
+**中文：** 2 对 2 街头篮球：Teddy & Tommy 队，扣篮加空中接力。单人或双人。
+
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
 Tap the language button under it (the A文 icon) to switch between English and 中文; the dashboard and every game remember the choice.
 
