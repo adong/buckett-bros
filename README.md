@@ -41,7 +41,7 @@ In 1-player and team mode you climb a ladder of three CPU teams: **MOON ROCKETS*
 
 - Movement is from the camera's point of view: W / ↑ runs up the screen, towards the hoop.
 - In 1-player mode both key sets control you, so arrows + J K L (and Enter) work too. Player 2 can also use numpad 1 2 3 0.
-- **P** or Esc pauses, and **M** turns the sound on or off. The ❚❚ and 🔊 buttons in the corner do the same.
+- **P** or Esc pauses, and **M** turns the sound on or off. In a game the ❚❚ and 🔊 buttons in the corner do the same, and every menu screen has its own 🔊 button in the top-right corner.
 - **Menus:** on the title screen, Enter or 1 is 1 player, 2 is team, 3 is versus, ← → change the level and C switches the clear rule. On team select, A D or ← → pick the rival (in versus, A D for player 1's partner and ← → for player 2's), and Enter plays.
 - **Touch:** the joystick and buttons appear on phones and tablets. The button labels change with the play (SHOOT or DUNK with the ball, JUMP / SWITCH / STEAL on defence). Two players need a keyboard.
 

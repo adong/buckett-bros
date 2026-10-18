@@ -303,6 +303,13 @@
   .stats tr.t0 td:first-child { color: #8cc2ff; }
   .btnrow { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
+  /* sound on / off on every menu screen (in a game the HUD has its own) */
+  #menuMute {
+    position: fixed; right: max(14px, env(safe-area-inset-right)); top: max(14px, env(safe-area-inset-top));
+    width: 54px; height: 54px; border-radius: 16px; font-size: 26px; line-height: 1; display: grid; place-items: center;
+    background: rgba(20, 18, 31, 0.6); border: 3px solid #fff; box-shadow: 0 4px 0 var(--ink); transition: opacity 0.3s;
+  }
+  #menuMute:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
   #loading { position: fixed; inset: 0; display: grid; place-items: center; background: #5b2f86; font-family: var(--display); font-size: 28px; letter-spacing: 2px; padding: 24px; text-align: center; }
   .rotate { display: none; position: fixed; left: 50%; bottom: 14px; translate: -50% 0; padding: 8px 14px; border-radius: 999px; background: rgba(20, 18, 31, 0.75); font-weight: 800; font-size: 13px; pointer-events: none; white-space: nowrap; }
   @media (orientation: portrait) and (max-width: 700px) { .rotate { display: block; } }
@@ -408,6 +415,8 @@
   </div>
   <p class="hint">Enter: next / rematch · Esc: menu</p>
 </div>
+
+<button id="menuMute" class="muteBtn hidden" title="Sound on / off (M)" aria-label="Sound on or off">🔊</button>
 
 <div id="loading">LOADING…</div>
 <div class="rotate">↻ Turn sideways for a bigger court!</div>

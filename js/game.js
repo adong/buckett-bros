@@ -751,6 +751,7 @@
 
   function show(id) {
     for (const s of ['title', 'select', 'pause', 'results']) $(s).classList.toggle('hidden', s !== id);
+    $('menuMute').classList.toggle('hidden', !id);
     G.screen = id || 'play';
   }
 
