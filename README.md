@@ -3,7 +3,7 @@
 [![BuckeTT Bros title screen](docs/screenshot.jpg)](https://adong.github.io/buckett-bros/)
 
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
-Tap **中文 / EN** under it to switch between English and 中文 (the dashboard and every game remember the choice).
+Tap the language button under it (the A文 icon) to switch between English and 中文; the dashboard and every game remember the choice.
 
 An arcade 2-on-2 street basketball game starring Teddy and Tommy, on a half court with one hoop, a chain net, chain-link fences and TEDDY / TOMMY / METRO graffiti, at sunset. It's inspired by the 90s arcade street-ball games, with our own names and art. It's built with Claude Code from plain JavaScript and Three.js, on the shared Claude Games kit.
 There are no image, model or audio files: the players are the kit's blocky characters, every texture is painted on a canvas, and every sound is synthesised.
