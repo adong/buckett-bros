@@ -3,6 +3,7 @@
 [![BuckeTT Bros title screen](docs/screenshot.jpg)](https://adong.github.io/buckett-bros/)
 
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
+Tap **中文 / EN** under it to switch between English and 中文 (the dashboard and every game remember the choice).
 
 An arcade 2-on-2 street basketball game starring Teddy and Tommy, on a half court with one hoop, a chain net, chain-link fences and TEDDY / TOMMY / METRO graffiti, at sunset. It's inspired by the 90s arcade street-ball games, with our own names and art. It's built with Claude Code from plain JavaScript and Three.js, on the shared Claude Games kit.
 There are no image, model or audio files: the players are the kit's blocky characters, every texture is painted on a canvas, and every sound is synthesised.
@@ -132,6 +133,8 @@ js/court.js        the street court: painted court, hoop and chain net, fences, 
 js/fx.js           particles, comic bursts (SLAM!, BLOCKED!), stars, +2 / +3, dizzy stars
 js/sfx.js          game sounds on top of Kit.sound
 js/game.js         scene, camera, drawing, events to effects, HUD, screens, main loop, window.game hooks
+js/keys.js         the keys the ? panel shows (Kit.help)
+js/zh.js           中文 for every word the player sees (Kit.lang); names, the logo and the graffiti stay English
 tools/soak.js      runs the headless tests under Node
 kit/               copy of ~/claude-games/kit (python3 ../kit/tools/sync.py .), never edited here
 dist/buckett-bros.html    the single-page build

@@ -115,9 +115,10 @@
     return (markerCache[idx] = Kit.gfx.toTexture(c));
   }
 
-  let bubbleTex = null;
+  const bubbleTex = {}; // one per language
   function bubbleTexture() {
-    if (bubbleTex) return bubbleTex;
+    const word = Kit.lang ? Kit.lang.t('PASS!') : 'PASS!';
+    if (bubbleTex[word]) return bubbleTex[word];
     const [c, g] = Kit.gfx.makeCanvas(192, 112);
     g.fillStyle = '#fff';
     g.strokeStyle = '#14121f';
@@ -130,8 +131,17 @@
     g.textAlign = 'center';
     g.textBaseline = 'middle';
     g.fillStyle = '#14121f';
-    g.fillText('PASS!', 96, 45);
-    return (bubbleTex = Kit.gfx.toTexture(c));
+    g.fillText(word, 96, 45);
+    return (bubbleTex[word] = Kit.gfx.toTexture(c));
+  }
+  // switching language mid-game repaints the speech bubbles already on the players
+  if (Kit.lang) {
+    Kit.lang.onChange(() => {
+      for (const v of G.views.values()) {
+        v.bubble.material.map = bubbleTexture();
+        v.bubble.material.needsUpdate = true;
+      }
+    });
   }
 
   function makeView(p, m) {
@@ -752,6 +762,7 @@
   function show(id) {
     for (const s of ['title', 'select', 'pause', 'results']) $(s).classList.toggle('hidden', s !== id);
     $('menuMute').classList.toggle('hidden', !id);
+    if (G.match && !G.demo) $('touch').classList.toggle('hidden', !!id || !G.touch); // no game buttons behind a menu
     G.screen = id || 'play';
   }
 

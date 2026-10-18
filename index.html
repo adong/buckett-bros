@@ -313,6 +313,34 @@
   #loading { position: fixed; inset: 0; display: grid; place-items: center; background: #5b2f86; font-family: var(--display); font-size: 28px; letter-spacing: 2px; padding: 24px; text-align: center; }
   .rotate { display: none; position: fixed; left: 50%; bottom: 14px; translate: -50% 0; padding: 8px 14px; border-radius: 999px; background: rgba(20, 18, 31, 0.75); font-weight: 800; font-size: 13px; pointer-events: none; white-space: nowrap; }
   @media (orientation: portrait) and (max-width: 700px) { .rotate { display: block; } }
+  /* short screens (phones sideways), last so it wins: the credit moves to the top-left corner (the touch hint fills the
+     bottom), and the menus tighten up so every screen fits without scrolling */
+  @media (max-height: 460px) {
+    .credit { bottom: auto; right: auto; top: max(8px, env(safe-area-inset-top)); left: max(12px, env(safe-area-inset-left)); font-size: 11px; }
+    .screen { gap: 6px; padding-top: 6px; padding-bottom: 6px; }
+    .touch-hint { font-size: 13px; max-width: 600px; }
+    .modes { gap: 10px; }
+    .modes .btn { font-size: 17px; padding: 8px 12px; border-radius: 16px; box-shadow: 0 6px 0 var(--ink); }
+    .modes .btn small { font-size: 10px; }
+    /* team select and results: everything, PLAY included, on one phone screen */
+    .seltitle { font-size: 22px; }
+    .vsmid { font-size: 30px; }
+    .tbox { width: 210px; padding: 8px 8px 8px; gap: 2px; }
+    .tbox .duo img { max-width: 64px; }
+    .tbox .nm { font-size: 15px; }
+    .cards { padding-top: 4px; gap: 8px; }
+    .card { padding: 4px 6px 5px; }
+    .card .duo img { width: 40px; height: 40px; }
+    .card.solo .duo img { width: 46px; height: 46px; }
+    .card .bl { display: none; }
+    .selbtns .btn, .btnrow .btn { padding: 6px 14px; box-shadow: 0 4px 0 var(--ink); }
+    #select .hint, #results .hint { display: none; }
+    #resFaces img { width: 64px; }
+    .big { font-size: 34px; }
+    .stats th, .stats td { padding: 2px 7px; }
+    /* the kit's ? and 中文 / EN buttons sit on the left edge: keep the joystick clear of them */
+    #stick { left: max(66px, calc(env(safe-area-inset-left) + 56px)); }
+  }
 </style>
 </head>
 <body>
@@ -352,7 +380,7 @@
 </div>
 
 <div id="title" class="screen hidden">
-  <div class="logo"><span class="l1" id="logoText"></span></div>
+  <div class="logo" data-no-lang><span class="l1" id="logoText"></span></div>
   <p class="tag" id="tagline"></p>
   <div class="modes">
     <button class="btn pulse" data-mode="1p">▶ 1 PLAYER<small>you + your brother vs the CPU</small></button>
@@ -427,6 +455,7 @@
 <script src="kit/roster.js"></script>
 <script src="kit/portraits.js"></script>
 <script src="kit/sound.js"></script>
+<script src="kit/lang.js"></script>
 <script src="kit/help.js"></script>
 <script src="js/title.js"></script>
 <script src="js/teams.js"></script>
@@ -440,5 +469,6 @@
 <script src="js/sfx.js"></script>
 <script src="js/game.js"></script>
 <script src="js/keys.js"></script>
+<script src="js/zh.js"></script>
 </body>
 </html>

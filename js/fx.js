@@ -86,7 +86,8 @@
 
   // A comic starburst with a word in it.
   const burstCache = {};
-  function burstTexture(word, fill, ink) {
+  function burstTexture(en, fill, ink) {
+    const word = Kit.lang ? Kit.lang.t(en) : en; // 中文 when the kids picked it (js/zh.js)
     const key = word + fill;
     if (burstCache[key]) return burstCache[key];
     const [c, g] = makeCanvas(384, 256);
@@ -104,7 +105,9 @@
     g.lineWidth = 10;
     g.strokeStyle = ink || '#14121f';
     g.stroke();
-    g.font = `${word.length > 7 ? 46 : word.length > 5 ? 56 : 66}px ${FONT}`;
+    let size = word.length > 7 ? 46 : word.length > 5 ? 56 : 66;
+    g.font = `${size}px ${FONT}`;
+    while (g.measureText(word).width > 300 && size > 30) g.font = `${(size -= 4)}px ${FONT}`; // Chinese runs wider
     g.textAlign = 'center';
     g.textBaseline = 'middle';
     g.lineWidth = 12;
